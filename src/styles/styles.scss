@@ -1,0 +1,19 @@
+@import "../app/style.scss";
+@import "../app/(user)/style.scss";
+@import "../app/(auth)/[id]/style.scss";
+
+@import "../components/ui/Inputs/InputText/styles.scss";
+@import "../components/ui/Inputs/Checkbox/styles.scss";
+@import "../components/ui/Button/styles.scss";
+@import "../components/ui/Modal/styles.scss";
+@import "../components/ui/Spin/styles.scss";
+@import "../components/ui/Logo/style.scss";
+
+@import "../components/alpha/Card/styles.scss";
+@import "../components/alpha/CardDate/style.scss";
+@import "../components/alpha/CardGuestsInfo/style.scss";
+@import "../components/alpha/CardPrice/style.scss";
+@import "../components/alpha/CreateCard/style.scss";
+@import "../components/alpha/CardForm/style.scss";
+@import "../components/alpha/CardGuestsList/style.scss";
+@import "../components/alpha/Guest/style.scss";

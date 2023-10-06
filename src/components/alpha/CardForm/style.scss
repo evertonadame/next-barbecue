@@ -1,0 +1,19 @@
+.create-barbecue-form {
+  @apply flex flex-col gap-4;
+
+  .title {
+    @apply text-lg font-extrabold text-center;
+  }
+
+  .input {
+    @apply border border-dark-default;
+  }
+
+  .button {
+    @apply rounded-none;
+
+    &[type="submit"] {
+      @apply mt-2;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.barbecue-guests {
+  @apply flex gap-3 items-center;
+
+  .guests-icon {
+    @apply w-[18px] h-[16px];
+  }
+
+  .guests-quantity {
+    @apply font-normal text-lg;
+  }
+}

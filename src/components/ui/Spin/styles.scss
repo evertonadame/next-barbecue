@@ -1,0 +1,7 @@
+.spin {
+  @apply animate-spin inline fill-blue-700 text-gray-200 h-5 w-5;
+
+  &-container {
+    @apply flex justify-center items-center;
+  }
+}

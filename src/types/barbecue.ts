@@ -1,0 +1,1 @@
+export type { Barbecue, GuestModel } from '@prisma/client';

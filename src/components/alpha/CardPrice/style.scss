@@ -1,0 +1,11 @@
+.barbecue-price {
+  @apply flex gap-3 items-center h-fit;
+
+  .price-icon {
+    @apply w-[18px] h-[16px];
+  }
+
+  .price {
+    @apply font-normal text-lg;
+  }
+}

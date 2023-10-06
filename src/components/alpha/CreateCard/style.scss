@@ -1,0 +1,15 @@
+.create-barbecue-card {
+  @apply w-full h-full px-5 min-h-[202px] bg-dark-lighter flex flex-col gap-2 justify-center items-center hover:ring-2 hover:ring-dark-default focus:ring-2 focus:outline-none focus:ring-dark-default duration-default cursor-pointer shadow-lg;
+
+  .create-barbecue-icon-circle {
+    @apply w-[90px] h-[90px] bg-primary-default flex justify-center items-center rounded-full;
+  }
+
+  .create-barbecue-icon {
+    @apply w-10 h-11;
+  }
+
+  .text {
+    @apply text-lg font-bold text-center;
+  }
+}

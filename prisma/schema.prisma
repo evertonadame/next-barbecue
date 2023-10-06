@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type GuestModel {
+  id           String
+  name         String
+  contribution Float
+  paid         Boolean @default(false)
+}
+
+type Price {
+  drinkIncluded Float
+  drinkNotIncluded Float
+}
+
+
+model Barbecue {
+  id        String  @id @default(uuid()) @map("_id")
+  name      String
+  date      String 
+  description String
+  price   Price
+  amountRaised Float @default(0)
+  userId String
+  guests GuestModel[]
+}

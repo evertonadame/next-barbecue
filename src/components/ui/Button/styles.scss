@@ -1,0 +1,15 @@
+.button {
+  @apply p-4 w-full bg-primary-default text-white rounded-[18px] font-bold text-xs duration-default flex gap-4 justify-center items-center;
+
+  &.primary {
+    @apply hover:bg-primary-dark;
+  }
+
+  &.outline {
+    @apply bg-transparent outline-2 outline-dark-default text-black hover:bg-dark-default hover:text-white -outline-offset-2 focus:bg-dark-default focus:text-white focus:ring-0 focus:outline-none;
+  }
+
+  &.loading {
+    @apply cursor-not-allowed;
+  }
+}

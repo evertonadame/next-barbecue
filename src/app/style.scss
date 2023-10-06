@@ -1,0 +1,28 @@
+.content-container {
+  @apply flex flex-col bg-dark-lightest h-full px-6;
+
+  &.home-container {
+    @apply mt-24;
+  }
+
+  .content-wrapper {
+    @apply -mt-12;
+
+    .home-page,
+    .home-skeleton {
+      @apply grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6;
+    }
+  }
+
+  .home-skeleton .card {
+    @apply animate-pulse bg-dark-lighter shadow-lg w-full min-h-[200px];
+  }
+}
+
+.shadow-container {
+  @apply shadow-xl shadow-gray-300 py-5 mt-10 w-[90%] max-w-[600px] mx-auto px-4 rounded-lg bg-[#fff];
+}
+
+.page-title {
+  @apply text-3xl text-center mt-12 sm:mt-20 font-extrabold;
+}

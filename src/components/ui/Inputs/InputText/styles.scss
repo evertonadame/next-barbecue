@@ -1,0 +1,19 @@
+.input-wrapper {
+  @apply flex flex-col w-full relative;
+
+  .label {
+    @apply text-xs md:text-lg font-bold w-fit mb-1 md:mb-4;
+  }
+
+  .error-message {
+    @apply mt-2 text-sm text-red-500 absolute -bottom-5;
+  }
+
+  .input {
+    @apply border-2 border-primary-default duration-default w-full py-3.5 px-5 rounded-none placeholder:italic placeholder:text-dark-default text-xs placeholder:text-xs md:placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-primary-dark focus:ring-offset-1 focus:ring-offset-primary-default;
+  }
+
+  .input[type="date"] {
+    @apply appearance-none bg-white;
+  }
+}
