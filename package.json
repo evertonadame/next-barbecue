@@ -20,6 +20,9 @@
     "swr": "^2.2.4",
     "tailwind-variants": "^0.1.14"
   },
+  "engines": {
+    "node": "18.17.1"
+  },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
