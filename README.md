@@ -41,7 +41,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ```
 
-Para gera uma base de autenticação no clerk é bem simples, siga o tutorial no site  https://clerk.com.
+Para gera uma base de autenticação no clerk é bem simples, siga o tutorial no site ![clerk](https://clerk.com/)
 
 Com suas chaves utilize o env.exemple para criar o seu env.local
 
@@ -53,7 +53,7 @@ CLERK_SECRET_KEY=<yout_clerk_secret>
 ```
 
 ```
-Também é necessario criar um banco no mongoDB https://cloud.mongodb.com/, com seu banco criado, utilize a url de conexão para adicionar ao env.local
+Também é necessario criar um banco no mongoDB ![mongoDB](https://cloud.mongodb.com/), com seu banco criado, utilize a url de conexão para adicionar ao env.local
 
 ex: DATABASE_URL=mongodb+srv://<your_user>:<your_password>@....../<database>
 
