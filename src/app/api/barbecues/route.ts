@@ -6,7 +6,9 @@ export async function GET() {
         const barbecues = await prisma.barbecue.findMany();
         return NextResponse.json(barbecues);
     } catch (error) {
-        return NextResponse.error();
+        return NextResponse.json(error, {
+            status: 400,
+        });
     }
 }
 

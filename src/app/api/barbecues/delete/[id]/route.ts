@@ -19,7 +19,9 @@ export async function DELETE(request: Request, {
         });
         return NextResponse.json(barbecues);
     } catch (error) {
-        return NextResponse.json(error);
+        return NextResponse.json(error, {
+            status: 400,
+        });
     }
 }
 
