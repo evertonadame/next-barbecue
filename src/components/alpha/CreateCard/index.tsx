@@ -5,10 +5,9 @@ import Image from "next/image";
 import { useState } from "react";
 import CardForm from "../CardForm";
 import type { Barbecue } from "@/types/barbecue";
-import { KeyedMutator } from "swr";
 
 type CreateBarbecueCardProps = {
-  handleMutate: KeyedMutator<Barbecue[]>;
+  handleMutate: (newBarbecues: Barbecue[]) => Promise<void>;
 };
 
 const CreateCard = ({ handleMutate }: CreateBarbecueCardProps) => {

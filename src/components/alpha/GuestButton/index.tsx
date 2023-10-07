@@ -82,7 +82,7 @@ const AddGuest = ({ price, barbecueId, guests, setGuests }: AddGuestProps) => {
           <InputText
             id="name"
             label="Nome"
-            placeholder="Pedro"
+            placeholder="Ex: João da Silva"
             {...register("name", {
               required: true,
             })}

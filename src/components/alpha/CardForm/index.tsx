@@ -16,7 +16,7 @@ type Inputs = {
 
 type CreateBarbecueFormProps = {
   closeModal: () => void;
-  handleMutate: KeyedMutator<Barbecue[]>;
+  handleMutate: (newBarbecues: Barbecue[]) => Promise<void>;
 };
 
 const BarbecueForm = ({

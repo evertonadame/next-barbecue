@@ -1,14 +1,21 @@
 "use client";
 
-import type { Barbecue } from "@/types/barbecue";
 import { useFetch } from "@/utils/useFetch";
 import Card from "@/components/alpha/Card";
 import CreateCard from "@/components/alpha/CreateCard";
+import type { Barbecue } from "@/types/barbecue";
 
 const Home = () => {
   const { data, isLoading, mutate } = useFetch<Barbecue[]>("/api/barbecues");
 
   const barbecues = data ?? [];
+
+  const handleMutate = async (newBarbecues: Barbecue[]) => {
+    const data = [...barbecues, ...newBarbecues];
+    await mutate(data, {
+      revalidate: false,
+    });
+  };
 
   return isLoading ? (
     <div className="home-skeleton">
@@ -19,7 +26,7 @@ const Home = () => {
     </div>
   ) : (
     <div className="home-page">
-      <CreateCard handleMutate={mutate} />
+      <CreateCard handleMutate={handleMutate} />
       {barbecues.map((barbecue) => (
         <Card
           key={barbecue.id}

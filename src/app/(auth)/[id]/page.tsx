@@ -32,10 +32,15 @@ const Page = ({ params }: PageProps) => {
         body: JSON.stringify(barbecue),
       });
 
-      await mutate({
-        ...data,
-        ...barbecue,
-      } as Barbecue);
+      await mutate(
+        {
+          ...data,
+          ...barbecue,
+        } as Barbecue,
+        {
+          revalidate: false,
+        }
+      );
     } catch (error) {
       console.error(error);
     }
@@ -55,14 +60,15 @@ const Page = ({ params }: PageProps) => {
         method: "DELETE",
       });
 
-      push("/");
+      // instead of revalidating the cache, we can just redirect the user to the home page and let the cache be invalidated by the next request
+      window.location.href = "/";
     } catch (error) {
       console.error(error);
     }
   };
 
   if (!data) {
-    push("/404");
+    push("/");
     return null;
   }
 
