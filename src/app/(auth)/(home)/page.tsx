@@ -12,9 +12,7 @@ const Home = () => {
 
   const handleMutate = async (newBarbecues: Barbecue[]) => {
     const data = [...barbecues, ...newBarbecues];
-    await mutate(data, {
-      revalidate: false,
-    });
+    await mutate(data);
   };
 
   return isLoading ? (

@@ -32,15 +32,10 @@ const Page = ({ params }: PageProps) => {
         body: JSON.stringify(barbecue),
       });
 
-      await mutate(
-        {
-          ...data,
-          ...barbecue,
-        } as Barbecue,
-        {
-          revalidate: false,
-        }
-      );
+      await mutate({
+        ...data,
+        ...barbecue,
+      } as Barbecue);
     } catch (error) {
       console.error(error);
     }
