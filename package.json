@@ -21,8 +21,7 @@
     "tailwind-variants": "^0.1.14"
   },
   "engines": {
-    "node": "18.17.1",
-    "pnpm": "7.31.0"
+    "node": "18.17.1"
   },
   "devDependencies": {
     "@types/node": "^20",
